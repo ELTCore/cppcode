@@ -36,7 +36,7 @@ using namespace std;
 //     bool containsDuplicate(vector<int> &nums)
 //     {
 //         unordered_set<int> s(nums.begin(), nums.end());
-//         return s.size() != nums.size();
+//         return s.size() != nums.  size();
 //     }
 // };
 // 执行用时：
