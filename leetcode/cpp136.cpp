@@ -19,7 +19,6 @@ public:
             else
                 hashSet.erase(it);
         }
-
         return *hashSet.begin();
     }
 };
