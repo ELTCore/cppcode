@@ -1,13 +1,14 @@
 #include <iostream>
 #include <vector>
+#include <stack>
 using namespace std;
 
 class CQueue
 {
     int length = 0;
     bool bl_LastTurnIsAppend = 1;
-    vector<int> pushStack;
-    vector<int> popStack;
+    stack<int> pushStack;
+    stack<int> popStack;
 
 public:
     void appendTail(int value)
@@ -16,13 +17,13 @@ public:
         {
             for (int i = 0; i < length; i++)
             {
-                pushStack.push_back(popStack.back());
-                popStack.pop_back();
+                pushStack.push(popStack.top());
+                popStack.pop();
             }
             bl_LastTurnIsAppend = 1;
         }
 
-        pushStack.push_back(value);
+        pushStack.push(value);
         length++;
     }
 
@@ -35,14 +36,14 @@ public:
         {
             for (int i = 0; i < length; i++)
             {
-                popStack.push_back(pushStack.back());
-                pushStack.pop_back();
+                popStack.push(pushStack.top());
+                pushStack.pop();
             }
             bl_LastTurnIsAppend = 0;
         }
 
-        int pop = popStack.back();
-        popStack.pop_back();
+        int pop = popStack.top();
+        popStack.pop();
         length--;
 
         return pop;
