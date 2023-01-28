@@ -14,11 +14,11 @@ public:
         {
             ++frequency[ch];
         }
-        for (int i = 0; i < s.size(); ++i)
+        for (char ch : s)
         {
-            if (frequency[s[i]] == 1)
+            if (frequency[ch] == 1)
             {
-                return s[i];
+                return ch;
             }
         }
         return ' ';
