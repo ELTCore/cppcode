@@ -8,14 +8,26 @@ class Solution
 public:
     int maxSubArray(vector<int> &nums)
     {
-        int pre = 0, maxAns = nums[0];
+        int currentMax = 0, globalMax = nums[0];
 
-        for (const auto &x : nums)
+        for (int i = 0; i < nums.size(); ++i)
         {
-            pre = max(pre + x, x);
-            maxAns = max(maxAns, pre);
+
+            if (currentMax + nums[i] < nums[i])
+            {
+                currentMax = nums[i];
+            }
+            else
+            {
+                currentMax = currentMax + nums[i];
+            }
+
+            if (globalMax < currentMax)
+            {
+                globalMax = currentMax;
+            }
         }
 
-        return maxAns;
+        return globalMax;
     }
 };
