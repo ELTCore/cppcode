@@ -18,7 +18,7 @@ public:
         {
             return head;
         }
-        else if (head.val == val)
+        else if (head->val == val)
         {
             return head->next;
         }

@@ -37,5 +37,7 @@ public:
             p = p->next;
             q = q->next;
         }
+
+        return p;
     }
 };
