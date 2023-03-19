@@ -13,15 +13,15 @@ PUBLIC	__JustMyCode_Default
 EXTRN	__CheckForDebuggerJustMyCode:PROC
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?Multiplay@@YAHHH@Z DD imagerel $LN4
-	DD	imagerel $LN4+42
+$pdata$?Multiplay@@YAHHH@Z DD imagerel $LN3
+	DD	imagerel $LN3+43
 	DD	imagerel $unwind$?Multiplay@@YAHHH@Z
 pdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?Multiplay@@YAHHH@Z DD 040a01H
-	DD	06340aH
-	DD	07006320aH
+$unwind$?Multiplay@@YAHHH@Z DD 025031201H
+	DD	0b20d2312H
+	DD	05009H
 xdata	ENDS
 ; Function compile flags: /Odt
 ;	COMDAT __JustMyCode_Default
@@ -30,28 +30,28 @@ __JustMyCode_Default PROC				; COMDAT
 	ret	0
 __JustMyCode_Default ENDP
 _TEXT	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ?Multiplay@@YAHHH@Z
 _TEXT	SEGMENT
-a$ = 48
-b$ = 56
+a$ = 80
+b$ = 88
 ?Multiplay@@YAHHH@Z PROC				; Multiplay, COMDAT
 ; File C:\Users\Laniakea\Documents\cppcode\VS\HelloWorld\HelloWorld\Math.cpp
 ; Line 2
-$LN4:
-	mov	QWORD PTR [rsp+8], rbx
-	push	rdi
-	sub	rsp, 32					; 00000020H
-	mov	edi, ecx
-	mov	ebx, edx
+$LN3:
+	mov	DWORD PTR [rsp+16], edx
+	mov	DWORD PTR [rsp+8], ecx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__34882F14_Math@cpp
 	call	__CheckForDebuggerJustMyCode
-	imul	edi, ebx
-	mov	rbx, QWORD PTR [rsp+48]
-	mov	eax, edi
+; Line 5
+	mov	eax, DWORD PTR a$[rbp]
+	imul	eax, DWORD PTR b$[rbp]
 ; Line 6
-	add	rsp, 32					; 00000020H
-	pop	rdi
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
 	ret	0
 ?Multiplay@@YAHHH@Z ENDP				; Multiplay
 _TEXT	ENDS

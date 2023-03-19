@@ -73,6 +73,7 @@ PUBLIC	??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ; std::bas
 PUBLIC	??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEBA_NXZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::operator bool
 PUBLIC	__JustMyCode_Default
 PUBLIC	??_C@_0BA@GDPKBKJ@Initialized?5Log@		; `string'
+EXTRN	strlen:PROC
 EXTRN	?uncaught_exception@std@@YA_NXZ:PROC		; std::uncaught_exception
 EXTRN	__imp_?good@ios_base@std@@QEBA_NXZ:PROC
 EXTRN	__imp_?flags@ios_base@std@@QEBAHXZ:PROC
@@ -91,83 +92,110 @@ EXTRN	__imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@D@Z:PRO
 EXTRN	__imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ:PROC
 EXTRN	__CheckForDebuggerJustMyCode:PROC
 EXTRN	__CxxFrameHandler4:PROC
+EXTRN	__GSHandlerCheck_EH4:PROC
+EXTRN	__security_check_cookie:PROC
 EXTRN	__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A:BYTE
+EXTRN	__security_cookie:QWORD
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?length@?$_Narrow_char_traits@DH@std@@SA_KQEBD@Z DD imagerel $LN6
-	DD	imagerel $LN6+47
+$pdata$?__empty_global_delete@@YAXPEAX@Z DD imagerel $LN3
+	DD	imagerel $LN3+33
+	DD	imagerel $unwind$?__empty_global_delete@@YAXPEAX@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?__empty_global_delete@@YAXPEAX_K@Z DD imagerel $LN3
+	DD	imagerel $LN3+38
+	DD	imagerel $unwind$?__empty_global_delete@@YAXPEAX_K@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?length@?$_Narrow_char_traits@DH@std@@SA_KQEBD@Z DD imagerel $LN3
+	DD	imagerel $LN3+42
 	DD	imagerel $unwind$?length@?$_Narrow_char_traits@DH@std@@SA_KQEBD@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?eq_int_type@?$_Narrow_char_traits@DH@std@@SA_NAEBH0@Z DD imagerel $LN5
-	DD	imagerel $LN5+46
+	DD	imagerel $LN5+72
 	DD	imagerel $unwind$?eq_int_type@?$_Narrow_char_traits@DH@std@@SA_NAEBH0@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?eof@?$_Narrow_char_traits@DH@std@@SAHXZ DD imagerel $LN5
-	DD	imagerel $LN5+26
+$pdata$?eof@?$_Narrow_char_traits@DH@std@@SAHXZ DD imagerel $LN3
+	DD	imagerel $LN3+34
 	DD	imagerel $unwind$?eof@?$_Narrow_char_traits@DH@std@@SAHXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?Log@@YAXPEBD@Z DD imagerel $LN4
-	DD	imagerel $LN4+58
+$pdata$?Log@@YAXPEBD@Z DD imagerel $LN3
+	DD	imagerel $LN3+65
 	DD	imagerel $unwind$?Log@@YAXPEBD@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?InitLog@@YAXXZ DD imagerel $LN4
-	DD	imagerel $LN4+32
+$pdata$?InitLog@@YAXXZ DD imagerel $LN3
+	DD	imagerel $LN3+41
 	DD	imagerel $unwind$?InitLog@@YAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z DD imagerel $LN39
-	DD	imagerel $LN39+531
+$pdata$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z DD imagerel $LN25
+	DD	imagerel $LN25+957
 	DD	imagerel $unwind$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$?dtor$0@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA DD imagerel ?dtor$0@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA
+	DD	imagerel ?dtor$0@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA+25
+	DD	imagerel $unwind$?dtor$0@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$?catch$1@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA DD imagerel ?catch$1@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA
-	DD	imagerel ?catch$1@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA+59
+	DD	imagerel ?catch$1@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA+73
 	DD	imagerel $unwind$?catch$1@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z DD imagerel $LN4
-	DD	imagerel $LN4+69
+$pdata$??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z DD imagerel $LN3
+	DD	imagerel $LN3+92
 	DD	imagerel $unwind$??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z DD imagerel $LN6
-	DD	imagerel $LN6+75
+$pdata$??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z DD imagerel $LN4
+	DD	imagerel $LN4+119
 	DD	imagerel $unwind$??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ DD imagerel $LN6
-	DD	imagerel $LN6+61
+$pdata$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ DD imagerel $LN4
+	DD	imagerel $LN4+100
 	DD	imagerel $unwind$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z DD imagerel $LN9
-	DD	imagerel $LN9+137
+$pdata$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z DD imagerel $LN7
+	DD	imagerel $LN7+211
 	DD	imagerel $unwind$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$?dtor$0@?0???0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z@4HA DD imagerel ?dtor$0@?0???0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z@4HA
+	DD	imagerel ?dtor$0@?0???0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z@4HA+25
+	DD	imagerel $unwind$?dtor$0@?0???0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z@4HA
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ DD imagerel $LN6
-	DD	imagerel $LN6+52
+	DD	imagerel $LN6+93
 	DD	imagerel $unwind$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEBA_NXZ DD imagerel $LN4
-	DD	imagerel $LN4+31
+$pdata$??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEBA_NXZ DD imagerel $LN3
+	DD	imagerel $LN3+41
 	DD	imagerel $unwind$??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEBA_NXZ
 pdata	ENDS
 ;	COMDAT ??_C@_0BA@GDPKBKJ@Initialized?5Log@
@@ -176,13 +204,14 @@ CONST	SEGMENT
 CONST	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEBA_NXZ DD 020601H
-	DD	030023206H
+$unwind$??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEBA_NXZ DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $ip2state$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ DB 02H
-	DB	'B'
+	DB	00H
 	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
@@ -192,27 +221,32 @@ $cppxdata$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ DB 060H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ DD 020619H
-	DD	030023206H
+$unwind$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ DD 025030f19H
+	DD	0d20a230fH
+	DD	05006H
 	DD	imagerel __CxxFrameHandler4
 	DD	imagerel $cppxdata$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$?dtor$0@?0???0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z@4HA DD 020601H
+	DD	050023206H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $ip2state$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z DB 06H
-	DB	'N'
 	DB	00H
-	DB	' '
+	DB	00H
+	DB	'\'
 	DB	02H
-	DB	082H
+	DB	'm', 02H
 	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $stateUnwindMap$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z DB 02H
-	DB	0cH
-	DD	imagerel ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ
-	DB	060H
+	DB	0eH
+	DD	imagerel ?dtor$0@?0???0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z@4HA
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -222,16 +256,16 @@ $cppxdata$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z 
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z DD 040f11H
-	DD	07340fH
-	DD	0700b320fH
+$unwind$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z DD 025031411H
+	DD	0d20f2314H
+	DD	0500bH
 	DD	imagerel __CxxFrameHandler4
 	DD	imagerel $cppxdata$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $ip2state$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ DB 02H
-	DB	'D'
+	DB	00H
 	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
@@ -241,25 +275,32 @@ $cppxdata$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ D
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ DD 020619H
-	DD	030023206H
+$unwind$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ DD 025030f19H
+	DD	0d20a230fH
+	DD	05006H
 	DD	imagerel __CxxFrameHandler4
 	DD	imagerel $cppxdata$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z DD 040a01H
-	DD	06340aH
-	DD	07006320aH
+$unwind$??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z DD 025031401H
+	DD	0d20f2314H
+	DD	0500bH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z DD 020601H
-	DD	030023206H
+$unwind$??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
 xdata	ENDS
 ;	COMDAT voltbl
 voltbl	SEGMENT
 _volmd	DB	00H
+voltbl	ENDS
+;	COMDAT voltbl
+voltbl	SEGMENT
+_volmd	DW	021H
+	DW	03a5H
 voltbl	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -268,25 +309,29 @@ $unwind$?catch$1@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$c
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$?dtor$0@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA DD 020601H
+	DD	050023206H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $ip2state$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z DB 0aH
-	DB	08cH
 	DB	00H
-	DB	092H
+	DB	00H
+	DB	0d9H, 03H
 	DB	02H
-	DB	'D'
+	DB	'<'
 	DB	04H
-	DB	'}', 04H
+	DB	'5', 09H
 	DB	02H
-	DB	'H'
+	DB	'n'
 	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $handlerMap$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z DB 02H
-	DB	011H
+	DB	01H
 	DB	080H
 	DD	imagerel ?catch$1@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA
-	DB	'I', 07H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -299,11 +344,10 @@ xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $stateUnwindMap$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z DB 06H
-	DB	0aH
-	DD	imagerel ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ
-	DB	050H
+	DB	0eH
+	DD	imagerel ?dtor$0@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA
+	DB	028H
 	DB	030H
-	DB	038H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -314,39 +358,54 @@ $cppxdata$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z DD 081619H
-	DD	0f3416H
-	DD	0f0127216H
-	DD	0c00ee010H
-	DD	0600b700cH
-	DD	imagerel __CxxFrameHandler4
+$unwind$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z DD 025042819H
+	DD	01122317H
+	DD	0500b0018H
+	DD	imagerel __GSHandlerCheck_EH4
 	DD	imagerel $cppxdata$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
+	DD	0bbH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?InitLog@@YAXXZ DD 010401H
-	DD	04204H
+$unwind$?InitLog@@YAXXZ DD 025030b01H
+	DD	0b206230bH
+	DD	05002H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?Log@@YAXPEBD@Z DD 020601H
-	DD	030023206H
+$unwind$?Log@@YAXPEBD@Z DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?eof@?$_Narrow_char_traits@DH@std@@SAHXZ DD 010401H
-	DD	04204H
+$unwind$?eof@?$_Narrow_char_traits@DH@std@@SAHXZ DD 025030b01H
+	DD	0b206230bH
+	DD	05002H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?eq_int_type@?$_Narrow_char_traits@DH@std@@SA_NAEBH0@Z DD 040a01H
-	DD	06340aH
-	DD	07006320aH
+$unwind$?eq_int_type@?$_Narrow_char_traits@DH@std@@SA_NAEBH0@Z DD 025031401H
+	DD	0d20f2314H
+	DD	0500bH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?length@?$_Narrow_char_traits@DH@std@@SA_KQEBD@Z DD 020601H
-	DD	030023206H
+$unwind$?length@?$_Narrow_char_traits@DH@std@@SA_KQEBD@Z DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?__empty_global_delete@@YAXPEAX_K@Z DD 025031401H
+	DD	0b20f2314H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?__empty_global_delete@@YAXPEAX@Z DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
 xdata	ENDS
 ; Function compile flags: /Odt
 ;	COMDAT __JustMyCode_Default
@@ -355,645 +414,945 @@ __JustMyCode_Default PROC				; COMDAT
 	ret	0
 __JustMyCode_Default ENDP
 _TEXT	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEBA_NXZ
 _TEXT	SEGMENT
-this$ = 48
+this$ = 80
 ??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEBA_NXZ PROC ; std::basic_ostream<char,std::char_traits<char> >::sentry::operator bool, COMDAT
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream
 ; Line 123
-$LN4:
-	push	rbx
-	sub	rsp, 32					; 00000020H
-	mov	rbx, rcx
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__C12F3EA4_ostream
 	call	__CheckForDebuggerJustMyCode
-	movzx	eax, BYTE PTR [rbx+8]
+; Line 124
+	mov	rax, QWORD PTR this$[rbp]
+	movzx	eax, BYTE PTR [rax+8]
 ; Line 125
-	add	rsp, 32					; 00000020H
-	pop	rbx
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
 	ret	0
 ??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEBA_NXZ ENDP ; std::basic_ostream<char,std::char_traits<char> >::sentry::operator bool
 _TEXT	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ
 _TEXT	SEGMENT
-this$ = 48
+_Zero_uncaught_exceptions$ = 0
+tv72 = 65
+this$ = 96
 ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ PROC ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry, COMDAT
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream
 ; Line 108
 $LN6:
-	push	rbx
-	sub	rsp, 32					; 00000020H
-	mov	rbx, rcx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__C12F3EA4_ostream
 	call	__CheckForDebuggerJustMyCode
 ; Line 112
 	call	?uncaught_exception@std@@YA_NXZ		; std::uncaught_exception
-	test	al, al
+	movzx	eax, al
+	test	eax, eax
+	jne	SHORT $LN4@sentry
+	mov	BYTE PTR tv72[rbp], 1
+	jmp	SHORT $LN5@sentry
+$LN4@sentry:
+	mov	BYTE PTR tv72[rbp], 0
+$LN5@sentry:
+	movzx	eax, BYTE PTR tv72[rbp]
+	mov	BYTE PTR _Zero_uncaught_exceptions$[rbp], al
 ; Line 117
-	jne	SHORT $LN2@sentry
+	movzx	eax, BYTE PTR _Zero_uncaught_exceptions$[rbp]
+	test	eax, eax
+	je	SHORT $LN2@sentry
 ; Line 118
-	mov	rcx, QWORD PTR [rbx]
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR [rax]
 	call	QWORD PTR __imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAXXZ
 $LN2@sentry:
 ; Line 120
-	mov	rcx, rbx
-	add	rsp, 32					; 00000020H
-	pop	rbx
-	jmp	??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base
+	mov	rcx, QWORD PTR this$[rbp]
+	call	??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base
+	npad	1
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
 ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ENDP ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
 _TEXT	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z
 _TEXT	SEGMENT
-this$ = 48
-_Ostr$ = 56
+_Tied$ = 0
+this$ = 96
+_Ostr$ = 104
 ??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z PROC ; std::basic_ostream<char,std::char_traits<char> >::sentry::sentry, COMDAT
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream
 ; Line 91
-$LN9:
-	mov	QWORD PTR [rsp+16], rbx
+$LN7:
+	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
-	push	rdi
-	sub	rsp, 32					; 00000020H
-	mov	rbx, rdx
-	mov	rdi, rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__C12F3EA4_ostream
 	call	__CheckForDebuggerJustMyCode
-	mov	rdx, rbx
-	mov	rcx, rdi
+	mov	rdx, QWORD PTR _Ostr$[rbp]
+	mov	rcx, QWORD PTR this$[rbp]
 	call	??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::_Sentry_base
 	npad	1
 ; Line 92
-	mov	rax, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rbx
-	call	QWORD PTR __imp_?good@ios_base@std@@QEBA_NXZ
-	test	al, al
-	je	SHORT $LN1@sentry
-; Line 97
-	mov	rax, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rbx
-	call	QWORD PTR __imp_?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ
-; Line 98
-	test	rax, rax
-	je	SHORT $LN4@sentry
-	cmp	rax, rbx
-	je	SHORT $LN4@sentry
-; Line 103
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
 	mov	rcx, rax
-	call	QWORD PTR __imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ
-; Line 104
-	mov	rax, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rbx
 	call	QWORD PTR __imp_?good@ios_base@std@@QEBA_NXZ
+	movzx	eax, al
+	test	eax, eax
+	jne	SHORT $LN2@sentry
+; Line 93
+	mov	rax, QWORD PTR this$[rbp]
+	mov	BYTE PTR [rax+8], 0
+; Line 94
 	jmp	SHORT $LN1@sentry
+$LN2@sentry:
+; Line 97
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
+	mov	rcx, rax
+	call	QWORD PTR __imp_?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ
+	mov	QWORD PTR _Tied$[rbp], rax
+; Line 98
+	cmp	QWORD PTR _Tied$[rbp], 0
+	je	SHORT $LN4@sentry
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	cmp	QWORD PTR _Tied$[rbp], rax
+	jne	SHORT $LN3@sentry
 $LN4@sentry:
 ; Line 99
-	mov	al, 1
+	mov	rax, QWORD PTR this$[rbp]
+	mov	BYTE PTR [rax+8], 1
+; Line 100
+	jmp	SHORT $LN1@sentry
+$LN3@sentry:
+; Line 103
+	mov	rcx, QWORD PTR _Tied$[rbp]
+	call	QWORD PTR __imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ
+; Line 104
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
+	mov	rcx, rax
+	call	QWORD PTR __imp_?good@ios_base@std@@QEBA_NXZ
+	mov	rcx, QWORD PTR this$[rbp]
+	mov	BYTE PTR [rcx+8], al
 $LN1@sentry:
 ; Line 105
-	mov	BYTE PTR [rdi+8], al
-	mov	rax, rdi
-	mov	rbx, QWORD PTR [rsp+56]
-	add	rsp, 32					; 00000020H
-	pop	rdi
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
 	ret	0
 ??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z ENDP ; std::basic_ostream<char,std::char_traits<char> >::sentry::sentry
 _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
-this$ = 48
-_Ostr$ = 56
+_Tied$ = 0
+this$ = 96
+_Ostr$ = 104
 ?dtor$0@?0???0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z@4HA PROC ; `std::basic_ostream<char,std::char_traits<char> >::sentry::sentry'::`1'::dtor$0
-	mov	rcx, QWORD PTR this$[rdx]
-	jmp	??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	lea	rbp, QWORD PTR [rdx+32]
+	mov	rcx, QWORD PTR this$[rbp]
+	call	??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
 ?dtor$0@?0???0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z@4HA ENDP ; `std::basic_ostream<char,std::char_traits<char> >::sentry::sentry'::`1'::dtor$0
 text$x	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT text$x
 text$x	SEGMENT
-this$ = 48
-_Ostr$ = 56
+_Tied$ = 0
+this$ = 96
+_Ostr$ = 104
 ?dtor$0@?0???0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z@4HA PROC ; `std::basic_ostream<char,std::char_traits<char> >::sentry::sentry'::`1'::dtor$0
-	mov	rcx, QWORD PTR this$[rdx]
-	jmp	??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	lea	rbp, QWORD PTR [rdx+32]
+	mov	rcx, QWORD PTR this$[rbp]
+	call	??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
 ?dtor$0@?0???0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z@4HA ENDP ; `std::basic_ostream<char,std::char_traits<char> >::sentry::sentry'::`1'::dtor$0
 text$x	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ
 _TEXT	SEGMENT
-this$ = 48
+_Rdbuf$ = 0
+tv72 = 72
+this$ = 96
 ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ PROC ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base, COMDAT
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream
 ; Line 77
-$LN6:
-	push	rbx
-	sub	rsp, 32					; 00000020H
-	mov	rbx, rcx
+$LN4:
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__C12F3EA4_ostream
 	call	__CheckForDebuggerJustMyCode
 ; Line 78
-	mov	rdx, QWORD PTR [rbx]
-	mov	rax, QWORD PTR [rdx]
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rdx
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rax, QWORD PTR [rax]
+	mov	QWORD PTR tv72[rbp], rax
+	mov	rax, QWORD PTR tv72[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR tv72[rbp]
+	add	rcx, rax
+	mov	rax, rcx
+	mov	rcx, rax
 	call	QWORD PTR __imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
+	mov	QWORD PTR _Rdbuf$[rbp], rax
 ; Line 79
-	test	rax, rax
+	cmp	QWORD PTR _Rdbuf$[rbp], 0
 	je	SHORT $LN2@Sentry_bas
 ; Line 80
-	mov	rdx, QWORD PTR [rax]
-	mov	rcx, rax
-	call	QWORD PTR [rdx+16]
+	mov	rax, QWORD PTR _Rdbuf$[rbp]
+	mov	rax, QWORD PTR [rax]
+	mov	rcx, QWORD PTR _Rdbuf$[rbp]
+	call	QWORD PTR [rax+16]
 	npad	1
 $LN2@Sentry_bas:
 ; Line 82
-	add	rsp, 32					; 00000020H
-	pop	rbx
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
 	ret	0
 ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ENDP ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base
 _TEXT	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z
 _TEXT	SEGMENT
-this$ = 48
-_Ostr$ = 56
+_Rdbuf$ = 0
+tv73 = 72
+this$ = 96
+_Ostr$ = 104
 ??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z PROC ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::_Sentry_base, COMDAT
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream
 ; Line 70
-$LN6:
-	mov	QWORD PTR [rsp+8], rbx
-	push	rdi
-	sub	rsp, 32					; 00000020H
-	mov	rdi, rcx
-	mov	rbx, rdx
+$LN4:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__C12F3EA4_ostream
 	call	__CheckForDebuggerJustMyCode
-	mov	QWORD PTR [rdi], rbx
-	mov	rax, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rbx
-	call	QWORD PTR __imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
-	test	rax, rax
-	je	SHORT $LN4@Sentry_bas
-; Line 73
-	mov	rdx, QWORD PTR [rax]
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	mov	QWORD PTR [rax], rcx
+; Line 71
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rax, QWORD PTR [rax]
+	mov	QWORD PTR tv73[rbp], rax
+	mov	rax, QWORD PTR tv73[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR tv73[rbp]
+	add	rcx, rax
+	mov	rax, rcx
 	mov	rcx, rax
-	call	QWORD PTR [rdx+8]
-$LN4@Sentry_bas:
+	call	QWORD PTR __imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
+	mov	QWORD PTR _Rdbuf$[rbp], rax
+; Line 72
+	cmp	QWORD PTR _Rdbuf$[rbp], 0
+	je	SHORT $LN2@Sentry_bas
+; Line 73
+	mov	rax, QWORD PTR _Rdbuf$[rbp]
+	mov	rax, QWORD PTR [rax]
+	mov	rcx, QWORD PTR _Rdbuf$[rbp]
+	call	QWORD PTR [rax+8]
+$LN2@Sentry_bas:
 ; Line 75
-	mov	rbx, QWORD PTR [rsp+48]
-	mov	rax, rdi
-	add	rsp, 32					; 00000020H
-	pop	rdi
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
 	ret	0
 ??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z ENDP ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::_Sentry_base
 _TEXT	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z
 _TEXT	SEGMENT
-_Ostr$ = 48
+_Ostr$ = 80
 ??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z PROC ; std::endl<char,std::char_traits<char> >, COMDAT
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream
 ; Line 974
-$LN4:
-	push	rbx
-	sub	rsp, 32					; 00000020H
-	mov	rbx, rcx
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__C12F3EA4_ostream
 	call	__CheckForDebuggerJustMyCode
-	mov	rax, QWORD PTR [rbx]
+; Line 975
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
 	mov	dl, 10
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rbx
+	mov	rcx, rax
 	call	QWORD PTR __imp_?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADD@Z
 	movzx	edx, al
-	mov	rcx, rbx
+	mov	rcx, QWORD PTR _Ostr$[rbp]
 	call	QWORD PTR __imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@D@Z
-	mov	rcx, rbx
+; Line 976
+	mov	rcx, QWORD PTR _Ostr$[rbp]
 	call	QWORD PTR __imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ
-	mov	rax, rbx
+; Line 977
+	mov	rax, QWORD PTR _Ostr$[rbp]
 ; Line 978
-	add	rsp, 32					; 00000020H
-	pop	rbx
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
 	ret	0
 ??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z ENDP ; std::endl<char,std::char_traits<char> >
 _TEXT	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
 _TEXT	SEGMENT
-$T1 = 32
-$T2 = 32
-_Ok$ = 40
-_Ostr$ = 112
-_Val$ = 120
-_State$ = 128
-$T3 = 136
-$T4 = 136
+_State$ = 0
+_Count$ = 8
+_Pad$ = 16
+_Ok$ = 24
+$T1 = 104
+$T2 = 108
+$T3 = 112
+$T4 = 116
+$T5 = 120
+tv300 = 128
+tv298 = 128
+tv295 = 128
+tv139 = 128
+tv137 = 128
+tv301 = 136
+tv299 = 136
+tv296 = 136
+tv302 = 144
+tv297 = 144
+__$ArrayPad$ = 152
+_Ostr$ = 176
+_Val$ = 184
 ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z PROC ; std::operator<<<std::char_traits<char> >, COMDAT
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream
 ; Line 731
-$LN39:
-	mov	QWORD PTR [rsp+16], rbx
+$LN25:
+	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
-	push	rsi
-	push	rdi
-	push	r12
-	push	r14
-	push	r15
-	sub	rsp, 64					; 00000040H
-	mov	r12, rdx
-	mov	rbx, rcx
+	push	rbp
+	sub	rsp, 192				; 000000c0H
+	lea	rbp, QWORD PTR [rsp+32]
+	mov	rax, QWORD PTR __security_cookie
+	xor	rax, rbp
+	mov	QWORD PTR __$ArrayPad$[rbp], rax
 	lea	rcx, OFFSET FLAT:__C12F3EA4_ostream
 	call	__CheckForDebuggerJustMyCode
 ; Line 735
-	xor	esi, esi
-	mov	DWORD PTR _State$[rsp], esi
+	mov	DWORD PTR _State$[rbp], 0
 ; Line 736
-	mov	rcx, r12
+	mov	rcx, QWORD PTR _Val$[rbp]
 	call	?length@?$_Narrow_char_traits@DH@std@@SA_KQEBD@Z ; std::_Narrow_char_traits<char,int>::length
-	mov	r15, rax
+	mov	QWORD PTR _Count$[rbp], rax
 ; Line 737
-	mov	r8, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [r8+4]
-	add	rcx, rbx
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
+	mov	rcx, rax
 	call	QWORD PTR __imp_?width@ios_base@std@@QEBA_JXZ
 	test	rax, rax
 	jle	SHORT $LN17@operator
-	mov	rcx, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [rcx+4]
-	add	rcx, rbx
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
+	mov	rcx, rax
 	call	QWORD PTR __imp_?width@ios_base@std@@QEBA_JXZ
-	cmp	rax, r15
+	cmp	rax, QWORD PTR _Count$[rbp]
 	jle	SHORT $LN17@operator
-	mov	rax, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rbx
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
+	mov	rcx, rax
 	call	QWORD PTR __imp_?width@ios_base@std@@QEBA_JXZ
-	mov	rdi, rax
-	sub	rdi, r15
+	sub	rax, QWORD PTR _Count$[rbp]
+	mov	QWORD PTR tv137[rbp], rax
 	jmp	SHORT $LN18@operator
 $LN17@operator:
-	mov	rdi, rsi
+	mov	QWORD PTR tv137[rbp], 0
 $LN18@operator:
+	mov	rax, QWORD PTR tv137[rbp]
+	mov	QWORD PTR _Pad$[rbp], rax
 ; Line 738
-	mov	rdx, rbx
-	lea	rcx, QWORD PTR _Ok$[rsp]
+	mov	rdx, QWORD PTR _Ostr$[rbp]
+	lea	rcx, QWORD PTR _Ok$[rbp]
 	call	??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z ; std::basic_ostream<char,std::char_traits<char> >::sentry::sentry
 	npad	1
 ; Line 740
-	lea	rcx, QWORD PTR _Ok$[rsp]
+	lea	rcx, QWORD PTR _Ok$[rbp]
 	call	??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEBA_NXZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::operator bool
-	test	al, al
+	movzx	eax, al
+	test	eax, eax
 	jne	SHORT $LN8@operator
 ; Line 741
-	mov	esi, 4
+	mov	eax, DWORD PTR _State$[rbp]
+	or	eax, 4
+	mov	DWORD PTR _State$[rbp], eax
 ; Line 742
-	jmp	$LN22@operator
+	jmp	$LN9@operator
 $LN8@operator:
 ; Line 744
-	mov	rax, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rbx
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
+	mov	rcx, rax
 	call	QWORD PTR __imp_?flags@ios_base@std@@QEBAHXZ
+	mov	DWORD PTR tv139[rbp], eax
+	mov	eax, DWORD PTR tv139[rbp]
 	and	eax, 448				; 000001c0H
 	cmp	eax, 64					; 00000040H
-	je	SHORT $LN30@operator
-$LL4@operator:
+	je	$LN11@operator
 ; Line 745
-	test	rdi, rdi
-	jle	SHORT $LN30@operator
+	jmp	SHORT $LN4@operator
+$LN2@operator:
+	mov	rax, QWORD PTR _Pad$[rbp]
+	dec	rax
+	mov	QWORD PTR _Pad$[rbp], rax
+$LN4@operator:
+	cmp	QWORD PTR _Pad$[rbp], 0
+	jle	$LN11@operator
 ; Line 746
-	mov	rax, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rbx
-	call	QWORD PTR __imp_?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADXZ
-	movzx	r14d, al
-	mov	rcx, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [rcx+4]
-	add	rcx, rbx
-	call	QWORD PTR __imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
-	movzx	edx, r14b
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
 	mov	rcx, rax
+	call	QWORD PTR __imp_?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADXZ
+	mov	BYTE PTR tv295[rbp], al
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
+	mov	rcx, rax
+	call	QWORD PTR __imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
+	mov	QWORD PTR tv296[rbp], rax
+	movzx	edx, BYTE PTR tv295[rbp]
+	mov	rcx, QWORD PTR tv296[rbp]
 	call	QWORD PTR __imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHD@Z
-	mov	DWORD PTR $T4[rsp], eax
+	mov	DWORD PTR tv297[rbp], eax
+	mov	eax, DWORD PTR tv297[rbp]
+	mov	DWORD PTR $T1[rbp], eax
 	call	?eof@?$_Narrow_char_traits@DH@std@@SAHXZ ; std::_Narrow_char_traits<char,int>::eof
-	mov	DWORD PTR $T2[rsp], eax
-	lea	rdx, QWORD PTR $T4[rsp]
-	lea	rcx, QWORD PTR $T2[rsp]
+	mov	DWORD PTR $T2[rbp], eax
+	lea	rdx, QWORD PTR $T1[rbp]
+	lea	rcx, QWORD PTR $T2[rbp]
 	call	?eq_int_type@?$_Narrow_char_traits@DH@std@@SA_NAEBH0@Z ; std::_Narrow_char_traits<char,int>::eq_int_type
-	test	al, al
-	jne	$LN36@operator
-; Line 745
-	dec	rdi
-	jmp	SHORT $LL4@operator
-$LN30@operator:
+	movzx	eax, al
+	test	eax, eax
+	je	SHORT $LN12@operator
+; Line 747
+	mov	eax, DWORD PTR _State$[rbp]
+	or	eax, 4
+	mov	DWORD PTR _State$[rbp], eax
+; Line 748
+	jmp	SHORT $LN11@operator
+$LN12@operator:
+; Line 750
+	jmp	$LN2@operator
+$LN11@operator:
 ; Line 753
-	mov	rax, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rbx
-	call	QWORD PTR __imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
-	mov	r8, r15
-	mov	rdx, r12
+	cmp	DWORD PTR _State$[rbp], 0
+	jne	SHORT $LN13@operator
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
 	mov	rcx, rax
+	call	QWORD PTR __imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
+	mov	QWORD PTR tv298[rbp], rax
+	mov	r8, QWORD PTR _Count$[rbp]
+	mov	rdx, QWORD PTR _Val$[rbp]
+	mov	rcx, QWORD PTR tv298[rbp]
 	call	QWORD PTR __imp_?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAA_JPEBD_J@Z
-	cmp	rax, r15
-	jne	SHORT $LN36@operator
-	npad	6
-$LL34@operator:
+	mov	QWORD PTR tv299[rbp], rax
+	mov	rax, QWORD PTR _Count$[rbp]
+	cmp	QWORD PTR tv299[rbp], rax
+	je	SHORT $LN13@operator
+; Line 754
+	mov	eax, DWORD PTR _State$[rbp]
+	or	eax, 4
+	mov	DWORD PTR _State$[rbp], eax
+$LN13@operator:
+; Line 757
+	cmp	DWORD PTR _State$[rbp], 0
+	jne	$LN14@operator
 ; Line 758
-	test	rdi, rdi
-	jle	SHORT $LN6@operator
+	jmp	SHORT $LN7@operator
+$LN5@operator:
+	mov	rax, QWORD PTR _Pad$[rbp]
+	dec	rax
+	mov	QWORD PTR _Pad$[rbp], rax
+$LN7@operator:
+	cmp	QWORD PTR _Pad$[rbp], 0
+	jle	$LN14@operator
 ; Line 759
-	mov	rax, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rbx
-	call	QWORD PTR __imp_?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADXZ
-	movzx	r14d, al
-	mov	rcx, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [rcx+4]
-	add	rcx, rbx
-	call	QWORD PTR __imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
-	movzx	edx, r14b
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
 	mov	rcx, rax
+	call	QWORD PTR __imp_?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADXZ
+	mov	BYTE PTR tv300[rbp], al
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
+	mov	rcx, rax
+	call	QWORD PTR __imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
+	mov	QWORD PTR tv301[rbp], rax
+	movzx	edx, BYTE PTR tv300[rbp]
+	mov	rcx, QWORD PTR tv301[rbp]
 	call	QWORD PTR __imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHD@Z
-	mov	DWORD PTR $T3[rsp], eax
+	mov	DWORD PTR tv302[rbp], eax
+	mov	eax, DWORD PTR tv302[rbp]
+	mov	DWORD PTR $T3[rbp], eax
 	call	?eof@?$_Narrow_char_traits@DH@std@@SAHXZ ; std::_Narrow_char_traits<char,int>::eof
-	mov	DWORD PTR $T1[rsp], eax
-	lea	rdx, QWORD PTR $T3[rsp]
-	lea	rcx, QWORD PTR $T1[rsp]
+	mov	DWORD PTR $T4[rbp], eax
+	lea	rdx, QWORD PTR $T3[rbp]
+	lea	rcx, QWORD PTR $T4[rbp]
 	call	?eq_int_type@?$_Narrow_char_traits@DH@std@@SA_NAEBH0@Z ; std::_Narrow_char_traits<char,int>::eq_int_type
-	test	al, al
-	jne	SHORT $LN36@operator
-; Line 758
-	dec	rdi
-	jmp	SHORT $LL34@operator
-$LN36@operator:
+	movzx	eax, al
+	test	eax, eax
+	je	SHORT $LN15@operator
+; Line 760
+	mov	eax, DWORD PTR _State$[rbp]
+	or	eax, 4
+	mov	DWORD PTR _State$[rbp], eax
+; Line 761
+	jmp	SHORT $LN14@operator
+$LN15@operator:
+; Line 763
+	jmp	$LN5@operator
+$LN14@operator:
 ; Line 766
-	mov	esi, 4
-	mov	DWORD PTR _State$[rsp], esi
-$LN6@operator:
-	mov	rax, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rbx
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
 	xor	edx, edx
+	mov	rcx, rax
 	call	QWORD PTR __imp_?width@ios_base@std@@QEAA_J_J@Z
 	npad	1
-	jmp	SHORT $LN22@operator
+	jmp	SHORT $LN9@operator
 $LN23@operator:
-	mov	rbx, QWORD PTR _Ostr$[rsp]
-	mov	esi, DWORD PTR _State$[rsp]
-$LN22@operator:
+$LN9@operator:
 ; Line 770
-	mov	rax, QWORD PTR [rbx]
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rbx
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
 	xor	r8d, r8d
-	mov	edx, esi
+	mov	edx, DWORD PTR _State$[rbp]
+	mov	rcx, rax
 	call	QWORD PTR __imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAAXH_N@Z
-	npad	1
 ; Line 771
-	lea	rcx, QWORD PTR _Ok$[rsp]
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	QWORD PTR $T5[rbp], rax
+	lea	rcx, QWORD PTR _Ok$[rbp]
 	call	??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
-	mov	rax, rbx
+	mov	rax, QWORD PTR $T5[rbp]
 ; Line 772
-	mov	rbx, QWORD PTR [rsp+120]
-	add	rsp, 64					; 00000040H
-	pop	r15
-	pop	r14
-	pop	r12
-	pop	rdi
-	pop	rsi
+	mov	rcx, QWORD PTR __$ArrayPad$[rbp]
+	xor	rcx, rbp
+	call	__security_check_cookie
+	lea	rsp, QWORD PTR [rbp+160]
+	pop	rbp
 	ret	0
 ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ENDP ; std::operator<<<std::char_traits<char> >
 _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
-$T1 = 32
-$T2 = 32
-_Ok$ = 40
-_Ostr$ = 112
-_Val$ = 120
-_State$ = 128
-$T3 = 136
-$T4 = 136
+_State$ = 0
+_Count$ = 8
+_Pad$ = 16
+_Ok$ = 24
+$T1 = 104
+$T2 = 108
+$T3 = 112
+$T4 = 116
+$T5 = 120
+tv300 = 128
+tv298 = 128
+tv295 = 128
+tv139 = 128
+tv137 = 128
+tv301 = 136
+tv299 = 136
+tv296 = 136
+tv302 = 144
+tv297 = 144
+__$ArrayPad$ = 152
+_Ostr$ = 176
+_Val$ = 184
 ?dtor$0@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA PROC ; `std::operator<<<std::char_traits<char> >'::`1'::dtor$0
-	lea	rcx, QWORD PTR _Ok$[rdx]
-	jmp	??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	lea	rbp, QWORD PTR [rdx+32]
+	lea	rcx, QWORD PTR _Ok$[rbp]
+	call	??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
 ?dtor$0@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA ENDP ; `std::operator<<<std::char_traits<char> >'::`1'::dtor$0
 text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
-$T1 = 32
-$T2 = 32
-_Ok$ = 40
-_Ostr$ = 112
-_Val$ = 120
-_State$ = 128
-$T3 = 136
-$T4 = 136
+_State$ = 0
+_Count$ = 8
+_Pad$ = 16
+_Ok$ = 24
+$T1 = 104
+$T2 = 108
+$T3 = 112
+$T4 = 116
+$T5 = 120
+tv300 = 128
+tv298 = 128
+tv295 = 128
+tv139 = 128
+tv137 = 128
+tv301 = 136
+tv299 = 136
+tv296 = 136
+tv302 = 144
+tv297 = 144
+__$ArrayPad$ = 152
+_Ostr$ = 176
+_Val$ = 184
 ?catch$1@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA PROC ; `std::operator<<<std::char_traits<char> >'::`1'::catch$1
 ; Line 767
 	mov	QWORD PTR [rsp+16], rdx
 	push	rbp
 	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
+	lea	rbp, QWORD PTR [rdx+32]
 __catch$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z$0:
-	mov	rdx, QWORD PTR _Ostr$[rbp]
-	mov	rax, QWORD PTR [rdx]
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rdx
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
 	mov	r8b, 1
 	mov	edx, 4
+	mov	rcx, rax
 	call	QWORD PTR __imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAAXH_N@Z
 	npad	1
-	mov	rax, 0
+	lea	rax, $LN23@catch$1
 	add	rsp, 32					; 00000020H
 	pop	rbp
 	ret	0
 	int	3
 ?catch$1@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA ENDP ; `std::operator<<<std::char_traits<char> >'::`1'::catch$1
 text$x	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT text$x
 text$x	SEGMENT
-$T1 = 32
-$T2 = 32
-_Ok$ = 40
-_Ostr$ = 112
-_Val$ = 120
-_State$ = 128
-$T3 = 136
-$T4 = 136
+_State$ = 0
+_Count$ = 8
+_Pad$ = 16
+_Ok$ = 24
+$T1 = 104
+$T2 = 108
+$T3 = 112
+$T4 = 116
+$T5 = 120
+tv300 = 128
+tv298 = 128
+tv295 = 128
+tv139 = 128
+tv137 = 128
+tv301 = 136
+tv299 = 136
+tv296 = 136
+tv302 = 144
+tv297 = 144
+__$ArrayPad$ = 152
+_Ostr$ = 176
+_Val$ = 184
 ?dtor$0@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA PROC ; `std::operator<<<std::char_traits<char> >'::`1'::dtor$0
-	lea	rcx, QWORD PTR _Ok$[rdx]
-	jmp	??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	lea	rbp, QWORD PTR [rdx+32]
+	lea	rcx, QWORD PTR _Ok$[rbp]
+	call	??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
 ?dtor$0@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA ENDP ; `std::operator<<<std::char_traits<char> >'::`1'::dtor$0
 text$x	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT text$x
 text$x	SEGMENT
-$T1 = 32
-$T2 = 32
-_Ok$ = 40
-_Ostr$ = 112
-_Val$ = 120
-_State$ = 128
-$T3 = 136
-$T4 = 136
+_State$ = 0
+_Count$ = 8
+_Pad$ = 16
+_Ok$ = 24
+$T1 = 104
+$T2 = 108
+$T3 = 112
+$T4 = 116
+$T5 = 120
+tv300 = 128
+tv298 = 128
+tv295 = 128
+tv139 = 128
+tv137 = 128
+tv301 = 136
+tv299 = 136
+tv296 = 136
+tv302 = 144
+tv297 = 144
+__$ArrayPad$ = 152
+_Ostr$ = 176
+_Val$ = 184
 ?catch$1@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA PROC ; `std::operator<<<std::char_traits<char> >'::`1'::catch$1
 ; Line 767
 	mov	QWORD PTR [rsp+16], rdx
 	push	rbp
 	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
+	lea	rbp, QWORD PTR [rdx+32]
 __catch$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z$0:
-	mov	rdx, QWORD PTR _Ostr$[rbp]
-	mov	rax, QWORD PTR [rdx]
-	movsxd	rcx, DWORD PTR [rax+4]
-	add	rcx, rdx
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
 	mov	r8b, 1
 	mov	edx, 4
+	mov	rcx, rax
 	call	QWORD PTR __imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAAXH_N@Z
 	npad	1
-	mov	rax, 0
+	lea	rax, $LN23@catch$1
 	add	rsp, 32					; 00000020H
 	pop	rbp
 	ret	0
 	int	3
 ?catch$1@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA ENDP ; `std::operator<<<std::char_traits<char> >'::`1'::catch$1
 text$x	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ?InitLog@@YAXXZ
 _TEXT	SEGMENT
 ?InitLog@@YAXXZ PROC					; InitLog, COMDAT
 ; File C:\Users\Laniakea\Documents\cppcode\VS\HelloWorld\HelloWorld\Log.cpp
 ; Line 5
-$LN4:
-	sub	rsp, 40					; 00000028H
+$LN3:
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__FA19376F_Log@cpp
 	call	__CheckForDebuggerJustMyCode
+; Line 6
 	lea	rcx, OFFSET FLAT:??_C@_0BA@GDPKBKJ@Initialized?5Log@
+	call	?Log@@YAXPEBD@Z				; Log
 ; Line 7
-	add	rsp, 40					; 00000028H
-	jmp	?Log@@YAXPEBD@Z				; Log
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
 ?InitLog@@YAXXZ ENDP					; InitLog
 _TEXT	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ?Log@@YAXPEBD@Z
 _TEXT	SEGMENT
-message$ = 48
+message$ = 80
 ?Log@@YAXPEBD@Z PROC					; Log, COMDAT
 ; File C:\Users\Laniakea\Documents\cppcode\VS\HelloWorld\HelloWorld\Log.cpp
 ; Line 10
-$LN4:
-	push	rbx
-	sub	rsp, 32					; 00000020H
-	mov	rbx, rcx
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__FA19376F_Log@cpp
 	call	__CheckForDebuggerJustMyCode
+; Line 11
+	mov	rdx, QWORD PTR message$[rbp]
 	mov	rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-	mov	rdx, rbx
 	call	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
-	mov	rcx, rax
 	lea	rdx, OFFSET FLAT:??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z ; std::endl<char,std::char_traits<char> >
+	mov	rcx, rax
+	call	QWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z
 ; Line 12
-	add	rsp, 32					; 00000020H
-	pop	rbx
-	rex_jmp	QWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
 ?Log@@YAXPEBD@Z ENDP					; Log
 _TEXT	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ?eof@?$_Narrow_char_traits@DH@std@@SAHXZ
 _TEXT	SEGMENT
 ?eof@?$_Narrow_char_traits@DH@std@@SAHXZ PROC		; std::_Narrow_char_traits<char,int>::eof, COMDAT
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring
 ; Line 469
-$LN5:
-	sub	rsp, 40					; 00000028H
+$LN3:
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__0D019051_xstring
 	call	__CheckForDebuggerJustMyCode
+; Line 470
 	mov	eax, -1
 ; Line 471
-	add	rsp, 40					; 00000028H
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
 	ret	0
 ?eof@?$_Narrow_char_traits@DH@std@@SAHXZ ENDP		; std::_Narrow_char_traits<char,int>::eof
 _TEXT	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ?eq_int_type@?$_Narrow_char_traits@DH@std@@SA_NAEBH0@Z
 _TEXT	SEGMENT
-_Left$ = 48
-_Right$ = 56
+tv65 = 64
+_Left$ = 96
+_Right$ = 104
 ?eq_int_type@?$_Narrow_char_traits@DH@std@@SA_NAEBH0@Z PROC ; std::_Narrow_char_traits<char,int>::eq_int_type, COMDAT
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring
 ; Line 461
 $LN5:
-	mov	QWORD PTR [rsp+8], rbx
-	push	rdi
-	sub	rsp, 32					; 00000020H
-	mov	rdi, rcx
-	mov	rbx, rdx
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__0D019051_xstring
 	call	__CheckForDebuggerJustMyCode
-	mov	eax, DWORD PTR [rbx]
-	cmp	DWORD PTR [rdi], eax
-	mov	rbx, QWORD PTR [rsp+48]
-	sete	al
+; Line 462
+	mov	rax, QWORD PTR _Left$[rbp]
+	mov	rcx, QWORD PTR _Right$[rbp]
+	mov	ecx, DWORD PTR [rcx]
+	cmp	DWORD PTR [rax], ecx
+	jne	SHORT $LN3@eq_int_typ
+	mov	DWORD PTR tv65[rbp], 1
+	jmp	SHORT $LN4@eq_int_typ
+$LN3@eq_int_typ:
+	mov	DWORD PTR tv65[rbp], 0
+$LN4@eq_int_typ:
+	movzx	eax, BYTE PTR tv65[rbp]
 ; Line 463
-	add	rsp, 32					; 00000020H
-	pop	rdi
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
 	ret	0
 ?eq_int_type@?$_Narrow_char_traits@DH@std@@SA_NAEBH0@Z ENDP ; std::_Narrow_char_traits<char,int>::eq_int_type
 _TEXT	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ?length@?$_Narrow_char_traits@DH@std@@SA_KQEBD@Z
 _TEXT	SEGMENT
-_First$ = 48
+_First$ = 80
 ?length@?$_Narrow_char_traits@DH@std@@SA_KQEBD@Z PROC	; std::_Narrow_char_traits<char,int>::length, COMDAT
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring
 ; Line 388
-$LN6:
-	push	rbx
-	sub	rsp, 32					; 00000020H
-	mov	rbx, rcx
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__0D019051_xstring
 	call	__CheckForDebuggerJustMyCode
-	mov	rax, -1
-	npad	4
-$LL3@length:
 ; Line 404
-	inc	rax
-	cmp	BYTE PTR [rbx+rax], 0
-	jne	SHORT $LL3@length
+	mov	rcx, QWORD PTR _First$[rbp]
+	call	strlen
 ; Line 406
-	add	rsp, 32					; 00000020H
-	pop	rbx
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
 	ret	0
 ?length@?$_Narrow_char_traits@DH@std@@SA_KQEBD@Z ENDP	; std::_Narrow_char_traits<char,int>::length
 _TEXT	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ?__empty_global_delete@@YAXPEAX_K@Z
 _TEXT	SEGMENT
-__formal$ = 8
-__formal$ = 16
+__formal$ = 80
+__formal$ = 88
 ?__empty_global_delete@@YAXPEAX_K@Z PROC		; __empty_global_delete, COMDAT
 ; File C:\Users\Laniakea\Documents\cppcode\VS\HelloWorld\HelloWorld\Log.cpp
+; Line 13
+$LN3:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__FA19376F_Log@cpp
-	jmp	__CheckForDebuggerJustMyCode
+	call	__CheckForDebuggerJustMyCode
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
 ?__empty_global_delete@@YAXPEAX_K@Z ENDP		; __empty_global_delete
 _TEXT	ENDS
-; Function compile flags: /Ogtpy
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ?__empty_global_delete@@YAXPEAX@Z
 _TEXT	SEGMENT
-__formal$ = 8
+__formal$ = 80
 ?__empty_global_delete@@YAXPEAX@Z PROC			; __empty_global_delete, COMDAT
 ; File C:\Users\Laniakea\Documents\cppcode\VS\HelloWorld\HelloWorld\Log.cpp
+; Line 13
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__FA19376F_Log@cpp
-	jmp	__CheckForDebuggerJustMyCode
+	call	__CheckForDebuggerJustMyCode
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
 ?__empty_global_delete@@YAXPEAX@Z ENDP			; __empty_global_delete
 _TEXT	ENDS
 END

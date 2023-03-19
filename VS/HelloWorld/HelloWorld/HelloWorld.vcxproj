@@ -117,7 +117,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AssemblerOutput>AssemblyCode</AssemblerOutput>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>Custom</Optimization>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Link>
@@ -147,7 +147,6 @@
     <ClCompile Include="Math.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EndBrace.h" />
     <ClInclude Include="Log.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -26,9 +26,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EndBrace.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
     <ClInclude Include="Log.h">
       <Filter>头文件</Filter>
     </ClInclude>

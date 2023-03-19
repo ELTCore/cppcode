@@ -9,7 +9,12 @@ static int Multiply(int a, int b)
 
 int main()
 {
-	int variable = 8;
+	const char* ptr = "hello";
+
+	if (ptr)
+		Log("Ptr is hello");
+	else
+		Log("Ptr is null!");
 
 	//std::cout << Multiply(5, 8) << std::endl;
 	std::cin.get();
