@@ -16,7 +16,7 @@ public:
             auto it = hashtable.find(target - numbers[i]);
 
             if (it != hashtable.end())
-                return {it->second+1, i+1};
+                return {it->second + 1, i + 1};
 
             hashtable[numbers[i]] = i;
         }
