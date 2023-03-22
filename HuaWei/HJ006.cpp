@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
         while ((target % i) == 0)
         {
             cout << i << " ";
-            target /= 2;
+            target /= i;
         }
     }
 
