@@ -8,17 +8,21 @@ class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         int n = nums.size();
+
         sort(nums.begin(), nums.end());
         vector<vector<int>> ans;
+
         // 枚举 a
         for (int first = 0; first < n; ++first) {
             // 需要和上一次枚举的数不相同
             if (first > 0 && nums[first] == nums[first - 1]) {
                 continue;
             }
+
             // c 对应的指针初始指向数组的最右端
             int third = n - 1;
             int target = -nums[first];
+            
             // 枚举 b
             for (int second = first + 1; second < n; ++second) {
                 // 需要和上一次枚举的数不相同

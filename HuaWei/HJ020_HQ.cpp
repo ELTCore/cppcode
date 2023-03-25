@@ -40,12 +40,12 @@ int main(int argc, char const *argv[])
         }
 
         int count = 0;
-        int i = 0;
+        // int i = 0;
         for (auto n : condition)
         {
-            cout << "[debug]: condition[" << i << "] = " << n << endl;
+            // cout << "[debug]: condition[" << i << "] = " << n << endl;
             count += n;
-            i++;
+            // i++;
         }
         if (count < 3)
         {
@@ -62,8 +62,12 @@ int main(int argc, char const *argv[])
             // string substr (size_t pos = 0, size_t len = npos) const;
             string sub_str = str.substr(i, 3);
 
+            cout << "[debug]: sub_str = " << sub_str << endl;
+
             // size_t find (const string& str, size_t pos = 0) const noexcept;
             size_t found = str.find(sub_str, i + 3); // 从当前子串之后开始查找
+
+            cout << "[debug]: size_t found = " << found << endl;
 
             /*
                 size_t 是一些C/C++标准在stddef.h中定义的,
@@ -85,6 +89,8 @@ int main(int argc, char const *argv[])
             cout << "OK" << endl;
         }
     }
+
+    system("pause");
 
     return 0;
 }

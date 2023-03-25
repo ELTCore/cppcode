@@ -42,6 +42,7 @@ static void checkStringAndMove(vector<char> vector_string, int &x, int &y)
             break;
 
         default:
+            // cout << "[debug]: error in 'if(vector_string.size() == 2)' " << endl;
             break;
         }
     }
@@ -71,6 +72,7 @@ static void checkStringAndMove(vector<char> vector_string, int &x, int &y)
             break;
 
         default:
+            // cout << "[debug]: error in 'if(vector_string.size() == 3)' " << endl;
             break;
         }
     }
