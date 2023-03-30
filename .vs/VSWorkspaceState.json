@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HuaWei",
-    "\\leetcodeSword"
+    "\\VS",
+    "\\VS\\HelloWorld\\HelloWorld",
+    "\\VS\\MyCppPractice",
+    "\\VS\\MyCppPractice\\MyCppPractice",
+    "\\VS\\MyCppPractice\\SubProjectTest"
   ],
-  "SelectedNode": "\\leetcodeSword\\T053I.cpp",
+  "SelectedNode": "\\VS\\MyCppPractice\\x64",
   "PreviewInSolutionExplorer": false
 }
