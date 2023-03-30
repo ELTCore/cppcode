@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cppEnum.cpp">
+    <ClCompile Include="src\cppEnum.cpp">
       <Filter>资源文件</Filter>
     </ClCompile>
   </ItemGroup>
