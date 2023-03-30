@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33328.57
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyCppPractice", "MyCppPractice\MyCppPractice.vcxproj", "{2DBCF9CD-297A-48A1-A507-5DAF58FA2911}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SubProjectTest", "SubProjectTest\SubProjectTest.vcxproj", "{9F1DC436-6F1F-40BD-962A-7DDC70273809}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\HelloWorld.vcxproj", "{89DDBC40-674D-4FC0-B712-A33FE02BF7BA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppEnum", "CppEnum\CppEnum.vcxproj", "{9D06B6D5-9AFC-4F37-91A0-891AEA80B748}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{89DDBC40-674D-4FC0-B712-A33FE02BF7BA}.Release|x64.Build.0 = Release|x64
 		{89DDBC40-674D-4FC0-B712-A33FE02BF7BA}.Release|x86.ActiveCfg = Release|Win32
 		{89DDBC40-674D-4FC0-B712-A33FE02BF7BA}.Release|x86.Build.0 = Release|Win32
+		{9D06B6D5-9AFC-4F37-91A0-891AEA80B748}.Debug|x64.ActiveCfg = Debug|x64
+		{9D06B6D5-9AFC-4F37-91A0-891AEA80B748}.Debug|x64.Build.0 = Debug|x64
+		{9D06B6D5-9AFC-4F37-91A0-891AEA80B748}.Debug|x86.ActiveCfg = Debug|Win32
+		{9D06B6D5-9AFC-4F37-91A0-891AEA80B748}.Debug|x86.Build.0 = Debug|Win32
+		{9D06B6D5-9AFC-4F37-91A0-891AEA80B748}.Release|x64.ActiveCfg = Release|x64
+		{9D06B6D5-9AFC-4F37-91A0-891AEA80B748}.Release|x64.Build.0 = Release|x64
+		{9D06B6D5-9AFC-4F37-91A0-891AEA80B748}.Release|x86.ActiveCfg = Release|Win32
+		{9D06B6D5-9AFC-4F37-91A0-891AEA80B748}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
