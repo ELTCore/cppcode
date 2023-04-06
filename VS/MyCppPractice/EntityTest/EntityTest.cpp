@@ -1,37 +1,58 @@
 #include <iostream>
 
-class Entity
+#include "..\CppEnum\global.h"
+
+class Printable
 {
 public:
-	float X, Y;
-
-	Entity() = delete;
-
-	Entity(float x, float y)
-	{
-		X = x;
-		Y = y;
-	}
-
-	~Entity()
-	{
-		std::cout << "awsl" << std::endl;
-	}
-
-	void Print()
-	{
-		std::cout << X << ", " << Y << std::endl;
-	}
+	virtual std::string GetClassName() = 0;
 };
 
+class Entity : public Printable
+{
+public:
+	virtual std::string GetName() { return "Entity"; }
+	std::string GetClassName() override { return "Entity"; }
+};
+
+class Player : public Entity
+{
+private:
+	std::string m_Name;
+public:
+	Player(const std::string& name)
+		: m_Name(name) {}
+
+	std::string GetName() override
+	{
+		return m_Name;
+	}
+
+	std::string GetClassName() override
+	{
+		return m_Name;
+	}
+
+
+	//std::string GetClassName() {
+	//	return;
+	//}
+};
+
+void Print(Printable* obj)
+{
+	std::cout << obj->GetClassName() << std::endl;
+}
 
 int main()
 {
-	//error
-	//Entity e;
+	Entity* e = new Entity();
+	Player* p = new Player("cherno");
 
-	Entity e(5.0f,10.0f);
-	e.Print();
+	std::cout << g_variable << std::endl;
+
+	Print(e);
+	Print(p);
 
 	std::cin.get();
 
