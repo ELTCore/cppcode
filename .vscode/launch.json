@@ -5,7 +5,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "targetArchitecture": "x86",
+            "targetArchitecture": "x64",
             "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
             "miDebuggerPath": "C:/dev/MinGW/bin/gdb.exe",
             "args": [],
