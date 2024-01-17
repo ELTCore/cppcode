@@ -59,34 +59,30 @@ public:
         }
 
         bool hasOutChar = false;
-        char lastCh = '\0';
-        do
+
+        for (int i = 0; i < s.size(); ++i)
         {
-            hasOutChar = false;
+            auto it = (--dict.end());
 
-            for (auto it = dict.rbegin(); it != dict.rend(); ++it)
+            const char &ch = it->first;
+            int &num = it->second;
+
+            std::string lastStr = resStr.substr(lastStr.size() - repeatLimit, lastStr.size());
+            
+            // for (auto itStr = lastStr.rbegin(); it != lastStr.rend(); ++it)
+            // {
+                // if (ch == itStr)
+                // {
+
+                // }
+            // }
+
+            --num;
+            if (num <= 0)
             {
-                int &num = it->second;
-                const char &ch = it->first;
-
-                if (num <= 0 || lastCh == ch)
-                {
-                    continue;
-                }
-                lastCh = ch;
-                hasOutChar = true;
-
-                int outNum = std::min(num, repeatLimit);
-
-                num -= outNum;
-
-                for (; outNum > 0; --outNum)
-                {
-                    resStr.push_back(ch);
-                }
+                dict.erase(it);
             }
-
-        } while (hasOutChar);
+        }
 
         return resStr;
     }
@@ -102,7 +98,7 @@ int main(int argc, char const *argv[])
     std::string res = solu.repeatLimitedString(words, repeatLimit);
 
     std::cout << "res = " << res << endl;
-    
+
     system("pause");
 
     return 0;
