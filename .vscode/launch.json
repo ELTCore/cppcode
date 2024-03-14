@@ -13,6 +13,6 @@
             "cwd": "${fileDirname}",
             "externalConsole": true,
             "preLaunchTask": "g++"
-        }
+        },
     ]
 }
