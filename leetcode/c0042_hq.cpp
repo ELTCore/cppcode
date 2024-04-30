@@ -47,6 +47,45 @@ public:
         {
             return 0;
         }
+        int result = 0;
+
+        int indexL = 0;
+        int indexR = height.size() - 1;
+        int maxL = 0;
+        int maxR = 0;
+
+        while (indexL < indexR)
+        {
+            maxL = max(maxL, height[indexL]);
+            maxR = max(maxR, height[indexR]);
+
+            if (height[indexL] < height[indexR])
+            {
+                result += maxL - height[indexL];
+                ++indexL;
+            }
+            else
+            {
+                result += maxR - height[indexR];
+                --indexR;
+            }
+        }
+
+        return result;
+    }
+};
+/*
+error
+
+class Solution
+{
+public:
+    int trap(vector<int> &height)
+    {
+        if (height.empty())
+        {
+            return 0;
+        }
 
         int res_vec = 0;
         int left_index = 0;
@@ -121,6 +160,7 @@ private:
         return res_vec;
     }
 };
+*/
 
 int main(int argc, char const *argv[])
 {
