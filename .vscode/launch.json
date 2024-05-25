@@ -12,7 +12,14 @@
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "externalConsole": true,
-            "preLaunchTask": "g++"
+            "preLaunchTask": "g++",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
         },
     ]
 }
