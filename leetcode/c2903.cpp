@@ -83,7 +83,7 @@ public:
 };
 
 int main(int argc, char const *argv[])
-{s
+{
     vector<int> nums = {5, 1, 4, 1};
     int indexDifference = 2;
     int valueDifference = 4;
