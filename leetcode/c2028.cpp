@@ -90,10 +90,6 @@ public:
         {
             res[i] += leftNum;
         }
-        // for (; i < res.size(); ++i)
-        // {
-        //     res[i] = 1;
-        // }
 
         return res;
     }
@@ -101,7 +97,7 @@ public:
 
 int main(int argc, char const *argv[])
 {
-    vector<int> rolls = {1,5,6};
+    vector<int> rolls = {1, 5, 6};
     int mean = 3;
     int n = 4;
 
